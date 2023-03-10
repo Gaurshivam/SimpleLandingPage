@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Assignment</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      var style1 = {
+        width: "30%",
+        color: "white",
+        textAlign: "center",
+      };
+      var style2 = {
+        width: "70%",
+        marginTop: "20px",
+        textAlign: "center"
+      };
+      var Aref = {
+        color: "white",
+        textDecoration: "none",
+        marginLeft: "100px",
+        fontSize:"18px"
+      };
+      var ImgRef = {
+        width:"100%",
+        height:"682px",
+        objectFit: "cover"
+      }
+      var card = (
+        <div style={{ width: "100%" }}>
+          <div
+            style={{
+              width: "100%",
+              backgroundColor: "black",
+              display: "flex",
+            }}
+          >
+            <div style={style1}>
+              <h2>Shivam Gaur</h2>
+            </div>
+            <div style={style2}>
+              <a style={Aref} href="#">
+                Home
+              </a>
+              <a style={Aref} href="#">
+                About
+              </a>
+              <a style={Aref} href="#">
+                Profile
+              </a>
+              <a style={Aref} href="#">
+                Menu
+              </a>
+              <a style={Aref} href="#">
+                Contact
+              </a>
+            </div>
+          </div>
+          <div >
+           <img  style={ImgRef}
+           src="https://media.istockphoto.com/id/1353429720/photo/vogel-state-park-georgia-usa-in-autumn.jpg?b=1&s=170667a&w=0&k=20&c=VCVm-vMRStQXWJ5yqt1C5yvNqRzbsTtN_qkE-SWGEYE=" alt="Home" />
+          </div>
+        </div>
+      );
+
+      ReactDOM.render(
+        <div style={{ display: "flex", justifyContent: "center" }}>{card}</div>,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
